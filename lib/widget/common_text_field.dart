@@ -42,28 +42,31 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      style: style,
-      textAlignVertical: TextAlignVertical.center,
-      textInputAction: textInputAction,
-      keyboardType: textInputType,
-      maxLength: maxLength,
-      maxLines: maxLines,
-      obscureText: obscureText,
-      controller: textEditingController,
-      validator:
-          validator ?? (val) => val!.trim().isEmpty ? "field required" : null,
-      decoration: InputDecoration(
-        errorBorder: errorBorder,
-        focusedErrorBorder: focusedBorder,
-        focusedBorder: focusedBorder,
-        enabledBorder: border,
-        hintStyle: hintStyle,
-        fillColor: fillColor,
-        filled: true,
-        contentPadding: const EdgeInsets.all(17),
-        suffixIcon: suffix,
-        hintText: hintText,
+    return Container(
+      height: 40,
+      child: TextFormField(
+        style: style,
+        textAlignVertical: TextAlignVertical.center,
+        textInputAction: textInputAction,
+        keyboardType: textInputType,
+        //maxLength: maxLength,
+        //maxLines: maxLines,
+        obscureText: obscureText,
+        controller: textEditingController,
+        validator:
+            validator ?? (val) => val!.trim().isEmpty ? "field required" : null,
+        decoration: InputDecoration(
+          errorBorder: errorBorder,
+          focusedErrorBorder: focusedBorder,
+          focusedBorder: focusedBorder,
+          enabledBorder: border,
+          hintStyle: hintStyle,
+          fillColor: fillColor,
+          filled: true,
+          contentPadding: const EdgeInsets.only(top: 10, left: 15),
+          suffixIcon: suffix,
+          hintText: hintText,
+        ),
       ),
     );
   }
@@ -72,8 +75,8 @@ class CustomTextField extends StatelessWidget {
     switch (textFieldType) {
       case TextFieldType.search:
         return Container(
-          height: 55,
-          width: 55,
+          height: 40,
+          width: 50,
           decoration: BoxDecoration(
               color: Color(0xff002343),
               borderRadius: BorderRadius.only(
@@ -130,23 +133,6 @@ class CustomTextField extends StatelessWidget {
         return Colors.white;
     }
     return Color(0xff003057);
-  }
-
-  int? get maxLength {
-    switch (textFieldType) {
-      case TextFieldType.phoneNumber:
-      case TextFieldType.phoneNumber2:
-        return 10;
-    }
-    return null;
-  }
-
-  int? get maxLines {
-    switch (textFieldType) {
-      case TextFieldType.additional:
-        return 2;
-    }
-    return null;
   }
 
   TextInputType? get textInputType {

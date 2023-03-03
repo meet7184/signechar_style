@@ -1,35 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:signature_stayle/ui/screen/drawer/resources_screen.dart';
+import 'package:signature_stayle/ui/screen/drawer/speaking_screen.dart';
+import 'package:signature_stayle/ui/screen/drawer/style_screen.dart';
 
 import '../../../const/app_icon.dart';
+import '../../../widget/app_bar.dart';
+import 'contact_screen.dart';
 
-class ReSourcesScreen extends StatelessWidget {
+class ReSourcesScreen extends StatefulWidget {
   static const String routeName = '/reSourcesScreen';
   const ReSourcesScreen({Key? key}) : super(key: key);
 
   @override
+  State<ReSourcesScreen> createState() => _ReSourcesScreenState();
+}
+
+class _ReSourcesScreenState extends State<ReSourcesScreen> {
+  // List<String> list = [
+  //   "SERVICES",
+  //   "MEET NATALIE",
+  //   "RESOURCES",
+  //   "SPEAKING",
+  //   "CONTACT",
+  //   "STYLE NOTES"
+  // ];
+  // int selectIndex = 0;
+  // final _scaffoldKey = GlobalKey<ScaffoldState>();
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70),
-        child: AppBar(
-          backgroundColor: Color(0xff002343),
-          actionsIconTheme: IconThemeData(),
-          leading: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 25, top: 10),
-                child: GestureDetector(
-                    onTap: () {
-                      //_scaffoldKey.currentState?.openDrawer();
-                    },
-                    child: Image.asset(AppAssets.menuImage, height: 30)),
-              ),
-            ],
-          ),
-          title:
-              Center(child: Image.asset(AppAssets.signatureImage, height: 55)),
-        ),
-      ),
+      //key: _scaffoldKey,
+      //drawer: drawer(),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
@@ -198,4 +201,68 @@ class ReSourcesScreen extends StatelessWidget {
       ),
     );
   }
+
+  // Widget? drawer() {
+  //   return Container(
+  //     width: 260,
+  //     decoration: BoxDecoration(
+  //         color: Color(0xff1AA6BF),
+  //         borderRadius: BorderRadius.only(
+  //             bottomRight: Radius.circular(35), topRight: Radius.circular(35))),
+  //     child: Column(
+  //       crossAxisAlignment: CrossAxisAlignment.start,
+  //       children: [
+  //         SizedBox(height: 50),
+  //         Padding(
+  //           padding: const EdgeInsets.all(8.0),
+  //           child: Image.asset(AppAssets.backButtonImage, height: 30),
+  //         ),
+  //         SizedBox(height: 10),
+  //         ...list
+  //             .asMap()
+  //             .map((index, value) => MapEntry(
+  //                 index,
+  //                 Column(
+  //                   children: [
+  //                     GestureDetector(
+  //                       onTap: () {
+  //                         if (index == 2) {
+  //                           Get.toNamed(ReSourcesScreen.routeName);
+  //                         }
+  //                         if (index == 3) {
+  //                           Get.toNamed(SpeakingScreen.routeName);
+  //                         }
+  //                         if (index == 4) {
+  //                           Get.toNamed(ContactScreen.routeName);
+  //                         }
+  //                         if (index == 5) {
+  //                           Get.toNamed(StyleScreen.routeName);
+  //                         }
+  //                       },
+  //                       child: Container(
+  //                         height: 30,
+  //                         width: double.infinity,
+  //                         color: Colors.transparent,
+  //                         margin: EdgeInsets.only(bottom: 5, top: 5),
+  //                         child: Padding(
+  //                           padding: const EdgeInsets.only(left: 20),
+  //                           child: Text(
+  //                             value,
+  //                             style: TextStyle(
+  //                                 fontSize: 20,
+  //                                 fontWeight: FontWeight.w400,
+  //                                 color: Colors.white),
+  //                           ),
+  //                         ),
+  //                       ),
+  //                     ),
+  //                     Divider(thickness: 1.5, color: Colors.white),
+  //                   ],
+  //                 )))
+  //             .values
+  //             .toList(),
+  //       ],
+  //     ),
+  //   );
+  // }
 }
