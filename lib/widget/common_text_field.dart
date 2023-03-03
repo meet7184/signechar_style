@@ -103,7 +103,7 @@ class CustomTextField extends StatelessWidget {
       case TextFieldType.styleThrough2:
         return TextStyle(color: Colors.black);
       case TextFieldType.search:
-        return TextStyle(color: Color(0xff002343));
+        return const TextStyle(color: Color(0xff002343));
     }
     return TextStyle(color: Colors.white);
   }
@@ -116,9 +116,9 @@ class CustomTextField extends StatelessWidget {
       case TextFieldType.subject2:
       case TextFieldType.styleThrough2:
       case TextFieldType.search:
-        return TextStyle(fontSize: 15, fontWeight: FontWeight.w400);
+        return const TextStyle(fontSize: 15, fontWeight: FontWeight.w400);
     }
-    return TextStyle(
+    return const TextStyle(
         color: Colors.white, fontSize: 15, fontWeight: FontWeight.w400);
   }
 

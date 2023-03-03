@@ -16,7 +16,7 @@ class _AppBarCommonState extends State<AppBarCommon> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Color(0xff002343),
+      color: const Color(0xff002343),
       child: SafeArea(
         child: Padding(
           padding:

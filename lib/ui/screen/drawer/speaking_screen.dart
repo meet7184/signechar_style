@@ -176,7 +176,7 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
               ),
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Text(
             "UPCOMING ENGAGEMENTS",
             style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
