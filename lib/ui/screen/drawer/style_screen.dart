@@ -138,10 +138,10 @@ class _StyleScreenState extends State<StyleScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
                       children: [
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         Image.asset(AppAssets.style6Image, height: 100),
                         SizedBox(height: 10),
-                        Text(
+                        const Text(
                           "I am an image consultant who believes everyone has a signature style they can rock with confidence. A passionate entrepreneur, color addict, and new mom. I'm so grateful to have clients who can benefit from my shoe and shopping problem.",
                           style: TextStyle(
                               fontWeight: FontWeight.w400, fontSize: 12),

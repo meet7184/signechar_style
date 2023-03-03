@@ -44,12 +44,12 @@ class _ContactScreenState extends State<ContactScreen> {
               child: Image.asset(AppAssets.speaking2Image, fit: BoxFit.cover),
             ),
             SizedBox(height: 20),
-            Text(
+            const Text(
               "CONTACT",
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
             ),
             SizedBox(height: 20),
-            Text(
+            const Text(
               "Sign up for our newsletter & more information!",
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
             ),

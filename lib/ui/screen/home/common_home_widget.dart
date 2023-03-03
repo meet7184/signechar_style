@@ -914,7 +914,7 @@ class _CommonHomeWidgetState extends State<CommonHomeWidget> {
           Text(
             text,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
           ),
           SizedBox(height: 20),
         ],
